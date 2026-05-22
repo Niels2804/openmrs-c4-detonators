@@ -41,6 +41,11 @@ services:
       timeout: 5s
     volumes:
       - openmrs-data:/openmrs/data
+      - ./modules/appframework-2.19.0.omod:/openmrs/data/modules/appframework-2.19.0.omod
+      - ./modules/appui-1.18.0.omod:/openmrs/data/modules/appui-1.18.0.omod
+      - ./modules/uicommons-3.1.0.omod:/openmrs/data/modules/uicommons-3.1.0.omod
+      - ./modules/uiframework-4.0.0.omod:/openmrs/data/modules/uiframework-4.0.0.omod
+      - ./modules/messagebridge-1.0.0-SNAPSHOT.omod:/openmrs/data/modules/messagebridge-1.0.0-SNAPSHOT.omod
     ports:
       - "5005:5005" # Debug port
 
