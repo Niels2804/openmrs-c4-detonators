@@ -36,6 +36,7 @@ services:
       OMRS_CONFIG_CONNECTION_USERNAME: ${OMRS_DB_USER:-openmrs}
       OMRS_CONFIG_CONNECTION_PASSWORD: ${OMRS_DB_PASSWORD:-openmrs}
       OMRS_DEV_DEBUG_PORT: "5005"
+      MESSAGEBRIDGE_WEBHOOK_URL: ${MESSAGEBRIDGE_WEBHOOK_URL:-http://my-api:8080/webhook/appointment-created}
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/openmrs"]
       timeout: 5s  
