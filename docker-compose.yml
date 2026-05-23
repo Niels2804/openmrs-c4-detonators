@@ -38,7 +38,7 @@ services:
       OMRS_DEV_DEBUG_PORT: "5005"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/openmrs"]
-      timeout: 5s
+      timeout: 5s  
     volumes:
       - openmrs-data:/openmrs/data
       - ./modules/appframework-2.19.0.omod:/openmrs/data/modules/appframework-2.19.0.omod
